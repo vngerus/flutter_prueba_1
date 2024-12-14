@@ -45,14 +45,14 @@ class _AnimalSoundsState extends State<AnimalSounds> {
       appBar: AppBar(
         backgroundColor: const Color(0xFF285555),
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          icon: const Icon(Icons.arrow_back, color: Colors.white, size: 28),
           onPressed: () {
             Navigator.pop(context);
           },
         ),
         actions: [
           IconButton(
-            icon: const Icon(Icons.search, color: Colors.white),
+            icon: const Icon(Icons.search, color: Colors.white, size: 28),
             onPressed: () {
               ScaffoldMessenger.of(context).showSnackBar(
                 const SnackBar(
@@ -72,12 +72,24 @@ class _AnimalSoundsState extends State<AnimalSounds> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  animal['name'] ?? 'Sin Nombre',
-                  style: const TextStyle(
-                    fontSize: 50,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
+                RichText(
+                  text: TextSpan(
+                    text: '  ',
+                    style: const TextStyle(
+                      fontSize: 50,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                    children: [
+                      TextSpan(
+                        text: animal['name'] ?? 'Sin Nombre',
+                        style: const TextStyle(
+                          fontSize: 50,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
                 const SizedBox(height: 30),
@@ -96,13 +108,22 @@ class _AnimalSoundsState extends State<AnimalSounds> {
                     ),
                   ),
                 ),
-                const SizedBox(height: 20),
-                Text(
-                  animal['description'] ?? 'Descripción no disponible.',
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(
-                    fontSize: 16,
-                    color: Colors.white,
+                Padding(
+                  padding: const EdgeInsets.only(
+                    left: 30.0,
+                    right: 30.0,
+                    top: 20.0,
+                  ),
+                  child: SizedBox(
+                    width: size.width * 0.8,
+                    child: Text(
+                      animal['description'] ?? 'Descripción no disponible.',
+                      textAlign: TextAlign.left,
+                      style: const TextStyle(
+                        fontSize: 16,
+                        color: Colors.white,
+                      ),
+                    ),
                   ),
                 ),
                 const Spacer(),
@@ -184,7 +205,7 @@ class GreenRectangle extends StatelessWidget {
     return Positioned(
       right: 0,
       top: size.height * 0.03,
-      bottom: 265,
+      bottom: 278,
       child: Container(
         padding: const EdgeInsets.only(left: 20.0),
         width: size.width * 0.59,

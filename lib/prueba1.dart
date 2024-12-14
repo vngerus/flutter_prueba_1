@@ -97,7 +97,7 @@ class AppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: height,
-      padding: const EdgeInsets.symmetric(horizontal: 25.0),
+      padding: const EdgeInsets.symmetric(horizontal: 24.0),
       child: const Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -109,21 +109,27 @@ class AppBar extends StatelessWidget {
               Icon(Icons.search, color: Colors.white, size: 28),
             ],
           ),
-          SizedBox(height: 20),
-          Text(
-            'Discover',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 28,
-              fontWeight: FontWeight.bold,
+          SizedBox(height: 10),
+          Padding(
+            padding: EdgeInsets.only(left: 7.0),
+            child: Text(
+              'Discover',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 28,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
           SizedBox(height: 10),
-          Text(
-            'Our majestic world together',
-            style: TextStyle(
-              color: Colors.white70,
-              fontSize: 18,
+          Padding(
+            padding: EdgeInsets.only(left: 8.0),
+            child: Text(
+              'Our majestic world together',
+              style: TextStyle(
+                color: Colors.white70,
+                fontSize: 18,
+              ),
             ),
           ),
         ],
