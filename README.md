@@ -1,16 +1,15 @@
-# flutter_prueba1
+# Prueba de Flutter: Pseudo Clon de una App
 
-A new Flutter project.
+Este proyecto es una práctica de Flutter diseñada para replicar parcialmente la funcionalidad y el diseño de una aplicación existente. Se incluye la funcionalidad de mostrar información y reproducir sonidos asociados a diferentes animales.
 
-## Getting Started
+### Vista Original
 
-This project is a starting point for a Flutter application.
+Esta es una captura de pantalla de la app original que se replicó parcialmente:
 
-A few resources to get you started if this is your first Flutter project:
+![Vista Original](assets/resources/original.png)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Resultado de la Prueba
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Esta es la captura de pantalla de la app que se desarrolló en Flutter como práctica:
+
+![Resultado de la Prueba](assets/resources/muestra.png)

@@ -199,21 +199,35 @@ class AnimalList extends StatelessWidget {
                     Positioned(
                       bottom: 10,
                       right: 10,
-                      child: IconButton(
-                        icon: const Icon(
-                          Icons.play_circle_fill,
+                      child: Container(
+                        padding: const EdgeInsets.all(2.0),
+                        decoration: BoxDecoration(
                           color: Colors.orange,
-                          size: 36,
-                        ),
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  AnimalSounds(animal: animal),
+                          borderRadius: BorderRadius.circular(50),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.2),
+                              blurRadius: 8,
+                              offset: const Offset(2, 2),
                             ),
-                          );
-                        },
+                          ],
+                        ),
+                        child: IconButton(
+                          icon: const Icon(
+                            Icons.play_arrow,
+                            color: Colors.white,
+                            size: 50,
+                          ),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    AnimalSounds(animal: animal),
+                              ),
+                            );
+                          },
+                        ),
                       ),
                     ),
                   ],
