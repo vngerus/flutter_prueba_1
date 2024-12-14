@@ -62,6 +62,7 @@ class Prueba1 extends StatelessWidget {
 
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: const Color(0xFF285555),
         body: SafeArea(
           child: Stack(
             children: [
